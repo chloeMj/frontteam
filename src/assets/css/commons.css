@@ -77,12 +77,11 @@
     font-size: 25px;
 }
 
-.service .github .github-block button {
-    vertical-align: middle;
+.service .github .github-block a {
+    position: absolute;
     text-align: center;
     color: #fff;
     font-weight: bold;
-    height: 40px;
     background: #b99e94;
     border: 0;
     border-bottom: 3px solid #8e776e;

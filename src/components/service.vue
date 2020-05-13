@@ -36,7 +36,7 @@
                 if you want to view our source, push the button
             </div>
             <div>
-                <button>GITHUB</button>
+                <a href="https://github.com/chloeMj/frontteam" >GITHUB</a>
             </div>
         </div>
     </div>
