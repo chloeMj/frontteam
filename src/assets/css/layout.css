@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+#app {
+    margin: 0 !important;
+}
+
+.section {
+    margin-top: 70px;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+.navi-block {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.navi-block>.nav {
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.navi-block>.nav>* {
+    margin-right: 15px;
+    line-height: 70px;
+}
+
+.navi-block>.nav>*:first-child {
+    margin: 0;
+    flex: 1;
+}
+
+.navi-block>.nav>*:last-child {
+    margin: 0;
+}
