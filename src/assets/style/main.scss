@@ -1,0 +1,244 @@
+.margin0 {
+  margin: 0;
+}
+.width100 {
+  width: 100%;
+}
+.maxWidth900 {
+  max-width: 900px;
+  margin: 0 auto;
+}
+p {
+  text-align: center;
+  font-weight: 700;
+}
+h3 {
+  font-size: 25px;
+  line-height: 30px;
+  margin: 10px 0 10px 0;
+}
+.btn {
+  text-align: center;
+  color: #fff;
+  background: #b99e94;
+  font: {
+    weight: 700;
+    size: 15px;
+  }
+  border: {
+    top: 0;
+    bottom: 3px solid #8e776e;
+    left: 0;
+    right: 0;
+    radius: 5px;
+  }
+  padding: 10px 45px;
+  text-decoration: none;
+  &:focus, &:hover, &:active, &:visited {
+    text-decoration: none;
+  }
+}
+
+body {
+  @extend .margin0;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.header {
+  $color-white: #fff;
+  $color-highlight: #421504;
+  position: fixed;
+  z-index: 2;
+  @extend .width100;
+  background-color: $color-white;
+  &:before {
+    content: '.';
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-highlight;
+    transition: top 0.5s ease-in-out;
+  }
+
+  .nav {
+    @extend .maxWidth900;
+    display: flex;
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      color: $color-white;
+      height: 70px;
+      line-height: 70px;
+      margin-right: 20px;
+      z-index: 3;
+      &:focus, &:hover, &:active, &:visited {
+        text-decoration: none;
+      }
+    }
+    a:first-child {
+      flex: 1;
+    }
+  }
+
+  &.isTop{
+    background-color: transparent;
+    .nav{
+      a {
+        //color: $color-highlight;
+      }
+    }
+  }
+
+  &.isTop:before {
+    top: -100%;
+  }
+}
+
+.content {
+  .container {
+    padding: 70px 0 0 0;
+    font-size: 15px;
+    .section {
+      padding: 25px 0;
+    }
+    &.home {
+      text-align: center;
+      padding-top: 0;
+      .card {
+        width: 100%;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+        &:before {
+          content: '.';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          top: 0;
+          left: 0;
+        }
+        .content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 600px;
+          height: 200px;
+          margin-left: -300px;
+          margin-top: -100px;
+          dl {
+            margin-bottom: 50px;
+            dt {
+              font-size: 25px;
+              margin: 5px 0;
+              &.big {
+                font-size: 40px;
+                font-weight: bolder;
+              }
+            }
+          }
+          a {
+            padding: 10px 25px;
+          }
+        }
+      }
+    }
+    &.service {
+      .points {
+        width: fit-content;
+        margin: 0 auto;
+        .point {
+          display: inline-block;
+          vertical-align: top;
+          width: 200px;
+          text-align: center;
+
+          &.active {
+            color: #b99e94;
+          }
+
+          p {
+            font-size: 18px;
+          }
+          .icon {
+            font-size: 30px;
+          }
+        }
+      }
+      .hire {
+        background-color: #f5f5f5;
+        text-align: center;
+      }
+      .languages {
+        display: none;
+      }
+      .github {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: linear-gradient(90deg,#421504,#9c7566);
+        color: #efcab1;
+        vertical-align: middle;
+        .github-block {
+          @extend .maxWidth900;
+          margin: 0 auto;
+          & > div {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 25px;
+            &:first-child {
+              width: calc(100% - 200px);
+              padding: 0;
+            }
+            a {
+              width: 150px;
+            }
+          }
+        }
+      }
+    }
+    &.contact {
+      max-width: 600px;
+      margin: 0 auto;
+      form {
+        margin: 50px 0 50px 0;
+        text-align: center;
+        .default {
+          width: 100%;
+          box-sizing: border-box;
+          margin-bottom: 10px;
+          font-size: 15px;
+        }
+        input {
+          @extend .default;
+          height: 35px;
+          line-height: 35px;
+        }
+        textarea {
+          @extend .default;
+          height: 200px;
+          line-height: 20px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  background: transparent;
+  border: 2px solid #b99e94;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  background: #b99e94;
+  opacity: 1;
+}
