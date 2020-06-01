@@ -1,0 +1,23 @@
+.header .nav {
+  a.navItem {
+    display: none;
+  }
+  .nav-hamburger {
+    display: block;
+  }
+}
+.content .container{
+  &.service {
+    .points {
+      width: 440px;
+    }
+    .hire {
+      padding: 25px 25px 45px 25px;
+    }
+  }
+  &.contact{
+    & > div {
+      padding: 20px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.margin0 {
+  margin: 0;
+}
+.width100 {
+  width: 100%;
+}
+.maxWidth900 {
+  max-width: 900px;
+  margin: 0 auto;
+}
+p {
+  text-align: center;
+  font-weight: 700;
+}
+h3 {
+  font-size: 25px;
+  line-height: 30px;
+  margin: 10px 0 10px 0;
+}
+.btn {
+  text-align: center;
+  color: #fff;
+  background: #b99e94;
+  font: {
+    weight: 700;
+    size: 15px;
+  }
+  border: {
+    top: 0;
+    bottom: 3px solid #8e776e;
+    left: 0;
+    right: 0;
+    radius: 5px;
+  }
+  padding: 10px 45px;
+  text-decoration: none;
+  &:focus, &:hover, &:active, &:visited {
+    text-decoration: none;
+  }
+}

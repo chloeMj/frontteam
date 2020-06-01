@@ -1,12 +1,7 @@
 <template>
   <div>
-    <div class="header isTop">
-      <div class="nav">
-        <a href="#home" class="scrollactive-item">FrontTeam</a>
-        <a href="#service" class="scrollactive-item">Service</a>
-        <a href="#contactus" class="scrollactive-item">Contact Us</a>
-      </div>
-    </div>
+    <navigator>
+    </navigator>
     <div class="content">
       <homeComp id="home"></homeComp>
       <service id="service"></service>
@@ -16,15 +11,21 @@
 </template>
 
 <script>
+import navigator from '../components/layout/navigator'
 import homeComp from '../components/homeComp'
 import service from '../components/service'
 import contact from '../components/contact'
 export default {
   name: 'Layout',
   components: {
+    navigator,
     homeComp,
     service,
     contact
+  },
+  data(){
+    return{
+    }
   },
   methods: {
     scrollEvnt(){
